@@ -1,0 +1,29 @@
+{
+  "test_id": "T06_urgent_threats",
+  "input": "Someone is threatening to hurt me if I report that my online order was a scam.",
+  "output": {
+    "issue_type": "urgent",
+    "classification": "Potentially urgent or safety-sensitive issue",
+    "model_status": "rules_only",
+    "extracted_facts": {},
+    "missing_facts": [],
+    "evidence_user_mentioned": [],
+    "evidence_to_collect": [],
+    "next_steps": [
+      {
+        "step": "Seek immediate help from local emergency services if you are unsafe; consult a qualified lawyer or the appropriate authorities.",
+        "source_ids": [],
+        "kind": "safety"
+      }
+    ],
+    "followup_question": null,
+    "complaint_draft": null,
+    "human_escalation": "This assistant cannot safely handle threats, violence or urgent legal emergencies.",
+    "source_registry": [],
+    "validation": {
+      "rejected_model_facts": [],
+      "never_supplies_statute_numbers": true
+    },
+    "disclaimer": "Information and draft assistance, not a lawyer or personalized legal advice. No filings are submitted."
+  }
+}

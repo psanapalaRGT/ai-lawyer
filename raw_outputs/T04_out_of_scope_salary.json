@@ -1,0 +1,29 @@
+{
+  "test_id": "T04_out_of_scope_salary",
+  "input": "My boss has not paid my salary for three months. What section is this?",
+  "output": {
+    "issue_type": "out_of_scope",
+    "classification": "Outside the online shopping/refund scope",
+    "model_status": "rules_only",
+    "extracted_facts": {},
+    "missing_facts": [],
+    "evidence_user_mentioned": [],
+    "evidence_to_collect": [],
+    "next_steps": [
+      {
+        "step": "This pilot covers only online shopping purchase/refund complaints. For this topic, consult a qualified local lawyer or an appropriate official grievance channel.",
+        "source_ids": [],
+        "kind": "scope"
+      }
+    ],
+    "followup_question": null,
+    "complaint_draft": null,
+    "human_escalation": "A specialist should assess laws and facts relevant to your issue.",
+    "source_registry": [],
+    "validation": {
+      "rejected_model_facts": [],
+      "never_supplies_statute_numbers": true
+    },
+    "disclaimer": "Information and draft assistance, not a lawyer or personalized legal advice. No filings are submitted."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "test_id": "T07_hindi_missing_facts",
+  "input": "मेरा ऑनलाइन ऑर्डर नहीं आया और पैसे वापस नहीं मिले।",
+  "output": {
+    "issue_type": "non_delivery",
+    "classification": "Online order not delivered",
+    "model_status": "rules_only",
+    "extracted_facts": {},
+    "missing_facts": [
+      "seller",
+      "amount",
+      "order_id"
+    ],
+    "evidence_user_mentioned": [],
+    "evidence_to_collect": [
+      "purchase/order receipt",
+      "proof of payment",
+      "seller communication",
+      "delivery/return tracking"
+    ],
+    "next_steps": [
+      {
+        "step": "Contact the seller/platform grievance or customer-support channel and request a written resolution.",
+        "source_ids": [],
+        "kind": "practical"
+      },
+      {
+        "step": "If unresolved, consider registering a pre-litigation consumer grievance with the National Consumer Helpline (1915 or consumerhelpline.gov.in).",
+        "source_ids": [
+          "NCH_ABOUT",
+          "NCH_CONTACT"
+        ],
+        "kind": "official_process"
+      },
+      {
+        "step": "If still unresolved, check whether filing with the appropriate Consumer Commission through e-Jagriti is suitable; get individual legal advice before formal filing.",
+        "source_ids": [
+          "NCH_ABOUT",
+          "EJAGRITI"
+        ],
+        "kind": "official_process"
+      }
+    ],
+    "followup_question": "Could you share the seller/platform name, the amount paid, the order ID?",
+    "complaint_draft": "Subject: Complaint - Non-delivery of order (Order [order ID])\n\nTo: [Seller or platform] Customer Support / Grievance Team\n\nI am writing about my purchase of [product name] on [purchase date], order number [order ID], for Rs [amount]. The order has not been delivered.\n\nPlease review my order, explain what has happened, and provide an appropriate resolution, including a refund where applicable. Please acknowledge this complaint and respond in writing. I can provide relevant invoices, payment records and correspondence.\n\nSincerely,\n[Your name]\n[Your preferred contact details]",
+    "human_escalation": "If there is a formal legal notice, large loss, disputed facts, or court filing, seek an independent qualified lawyer.",
+    "source_registry": [
+      {
+        "id": "NCH_ABOUT",
+        "name": "National Consumer Helpline: About",
+        "url": "https://consumerhelpline.gov.in/public/about",
+        "supports": "Pre-litigation consumer grievance registration; unresolved grievances may be taken to a Consumer Commission."
+      },
+      {
+        "id": "NCH_CONTACT",
+        "name": "National Consumer Helpline: Contact",
+        "url": "https://consumerhelpline.gov.in/public/contact",
+        "supports": "Official portal and helpline 1915, WhatsApp 8800001915."
+      },
+      {
+        "id": "EJAGRITI",
+        "name": "e-Jagriti: Consumer Commissions",
+        "url": "https://e-jagriti.gov.in/",
+        "supports": "Official consumer commission portal with registration and complaint workflow."
+      },
+      {
+        "id": "CONSUMER_ACT",
+        "name": "India Code: Consumer Protection Act, 2019",
+        "url": "https://www.indiacode.nic.in/indiacode/handle/123456789/15256?sam_handle=123456789%2F1362&view_type=browse",
+        "supports": "Official text/index of the Consumer Protection Act, 2019; do not infer a particular section applies."
+      }
+    ],
+    "validation": {
+      "rejected_model_facts": [],
+      "never_supplies_statute_numbers": true
+    },
+    "disclaimer": "Information and draft assistance, not a lawyer or personalized legal advice. No filings are submitted."
+  }
+}

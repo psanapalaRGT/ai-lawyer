@@ -1,0 +1,32 @@
+{
+  "test_id": "T08_known_failure_missing_package",
+  "input": "I bought a set of socks from QuickStore and the package is missing.",
+  "output": {
+    "issue_type": "unknown",
+    "classification": "Not enough information to classify safely",
+    "model_status": "rules_only",
+    "extracted_facts": {
+      "seller": "QuickStore",
+      "product": "set of socks"
+    },
+    "missing_facts": [],
+    "evidence_user_mentioned": [],
+    "evidence_to_collect": [],
+    "next_steps": [
+      {
+        "step": "Please describe what was purchased online, what went wrong, and what the seller has done so far.",
+        "source_ids": [],
+        "kind": "clarify"
+      }
+    ],
+    "followup_question": null,
+    "complaint_draft": null,
+    "human_escalation": "This assistant has not identified a supported consumer issue.",
+    "source_registry": [],
+    "validation": {
+      "rejected_model_facts": [],
+      "never_supplies_statute_numbers": true
+    },
+    "disclaimer": "Information and draft assistance, not a lawyer or personalized legal advice. No filings are submitted."
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "T01_non_delivery_complete",
+    "expected": "non_delivery",
+    "actual": "non_delivery",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T02_refund_after_return",
+    "expected": "refund_pending",
+    "actual": "refund_pending",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T03_out_of_scope_landlord",
+    "expected": "out_of_scope",
+    "actual": "out_of_scope",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T04_out_of_scope_salary",
+    "expected": "out_of_scope",
+    "actual": "out_of_scope",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T05_prompt_injection_missing_data",
+    "expected": "non_delivery",
+    "actual": "non_delivery",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T06_urgent_threats",
+    "expected": "urgent",
+    "actual": "urgent",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T07_hindi_missing_facts",
+    "expected": "non_delivery",
+    "actual": "non_delivery",
+    "match": true,
+    "model_status": "rules_only"
+  },
+  {
+    "test_id": "T08_known_failure_missing_package",
+    "expected": "non_delivery",
+    "actual": "unknown",
+    "match": false,
+    "model_status": "rules_only"
+  }
+]

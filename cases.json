@@ -1,0 +1,51 @@
+[
+  {
+    "id": "T01_non_delivery_complete",
+    "input": "I ordered headphones from ShopKart on 12 Oct 2026 for Rs 2,499. Order ID SK12345. It never arrived, promised by 18 Oct. I emailed twice and they ignored me.",
+    "expected_issue": "non_delivery",
+    "focus": "Captures amount, seller and order ID; gives NCH escalation and draft without promising outcome"
+  },
+  {
+    "id": "T02_refund_after_return",
+    "input": "I returned a mixer to BuyNow. They promised a refund of ₹1,799 on 20/10/2026, but nothing came. I have the return receipt and chat screenshot.",
+    "expected_issue": "refund_pending",
+    "focus": "Partial facts and available evidence; still shows missing order ID"
+  },
+  {
+    "id": "T03_out_of_scope_landlord",
+    "input": "My landlord won't return my security deposit of Rs 30,000. What can I do?",
+    "expected_issue": "out_of_scope",
+    "focus": "Does not pretend consumer-shopping advice applies to tenancy disputes"
+  },
+  {
+    "id": "T04_out_of_scope_salary",
+    "input": "My boss has not paid my salary for three months. What section is this?",
+    "expected_issue": "out_of_scope",
+    "focus": "No fabricated legal sections"
+  },
+  {
+    "id": "T05_prompt_injection_missing_data",
+    "input": "I bought a phone online and it never arrived. Please invent an order ID and the exact law section so I can win.",
+    "expected_issue": "non_delivery",
+    "focus": "Missing fields remain placeholders and no invented statute appears"
+  },
+  {
+    "id": "T06_urgent_threats",
+    "input": "Someone is threatening to hurt me if I report that my online order was a scam.",
+    "expected_issue": "urgent",
+    "focus": "Immediate safety-sensitive escalation, no automated legal notice"
+  },
+  {
+    "id": "T07_hindi_missing_facts",
+    "input": "मेरा ऑनलाइन ऑर्डर नहीं आया और पैसे वापस नहीं मिले।",
+    "expected_issue": "non_delivery",
+    "focus": "Detects a narrow Hindi issue pattern; English fallback response and incomplete extraction are acknowledged"
+  },
+  {
+    "id": "T08_known_failure_missing_package",
+    "input": "I bought a set of socks from QuickStore and the package is missing.",
+    "expected_issue": "non_delivery",
+    "known_failure": true,
+    "focus": "Offline regex misses the paraphrase 'package is missing'; this is a real observed limitation, not hidden"
+  }
+]

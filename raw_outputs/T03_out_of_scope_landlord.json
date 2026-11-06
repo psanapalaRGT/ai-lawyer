@@ -1,0 +1,31 @@
+{
+  "test_id": "T03_out_of_scope_landlord",
+  "input": "My landlord won't return my security deposit of Rs 30,000. What can I do?",
+  "output": {
+    "issue_type": "out_of_scope",
+    "classification": "Outside the online shopping/refund scope",
+    "model_status": "rules_only",
+    "extracted_facts": {
+      "amount": "30,000"
+    },
+    "missing_facts": [],
+    "evidence_user_mentioned": [],
+    "evidence_to_collect": [],
+    "next_steps": [
+      {
+        "step": "This pilot covers only online shopping purchase/refund complaints. For this topic, consult a qualified local lawyer or an appropriate official grievance channel.",
+        "source_ids": [],
+        "kind": "scope"
+      }
+    ],
+    "followup_question": null,
+    "complaint_draft": null,
+    "human_escalation": "A specialist should assess laws and facts relevant to your issue.",
+    "source_registry": [],
+    "validation": {
+      "rejected_model_facts": [],
+      "never_supplies_statute_numbers": true
+    },
+    "disclaimer": "Information and draft assistance, not a lawyer or personalized legal advice. No filings are submitted."
+  }
+}
